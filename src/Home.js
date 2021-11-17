@@ -3,6 +3,20 @@ import { getFirestore, collection, getDocs } from "@firebase/firestore";
 import { db } from "./firebase-config";
 import UserList from "./UserList";
 const Home = () => {
+  //geoLocation
+  // const [geoLocation, setGeoLocation] = useState([]);
+  // if (navigator.geolocation)
+  //   navigator.geolocation.getCurrentPosition(
+  //     function (position) {
+  //       const { latitude } = position.coords;
+  //       const { longitude } = position.coords;
+  //       const coords = [latitude, longitude];
+  //       setGeoLocation(coords);
+  //     },
+  //     function () {
+  //       alert("Could not get your position");
+  //     }
+  //   );
   const [usersData, setUsersData] = useState([]);
   const userCollectionRef = collection(db, "user-info");
   useEffect(() => {
@@ -18,7 +32,6 @@ const Home = () => {
     };
     getUser();
   }, []);
-
   return (
     <div className="home">
       <h2>Homepage</h2>
