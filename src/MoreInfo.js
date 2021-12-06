@@ -24,6 +24,7 @@ const MoreInfo = () => {
           <p>
             Geo-Location : [ {user.geoLocation[0]} , {user.geoLocation[1]} ]
           </p>
+          <p><a href={`https://www.google.com/maps/@${user.geoLocation[0]},${user.geoLocation[1]},11z`}>location...</a></p>
         </article>
       )}
       {/* <MapContainer center={coords} zoom={13} scrollWheelZoom={false}>
