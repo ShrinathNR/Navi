@@ -13,12 +13,6 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/track">
-              <TrackUser />
-            </Route>
-            <Route path="/users/:id">
-              <MoreInfo />
-            </Route>
           </Switch>
         </div>
       </div>

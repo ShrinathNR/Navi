@@ -6,8 +6,11 @@ const UserList = ({ usersData, fullInfo }) => {
       {usersData.map((user) => (
         <div className="user-preview" key={user.id}>
           <h2>{user.name}</h2>
-          <p>Pulse Rate💓: {user.pulseRate}</p>
-          <p>Location 🌎: {user.location}</p>
+          <p>body temperature: {user.bodyTemperatureinc}</p>
+          <p>room temperature : {user.roomTemperatureinc}</p>
+          <p>heatindex: {user.heatindexinc}</p>
+          <p>humidity : {user.humidity}</p>
+
           <a href={`/users/${user.id}`}>
             <button className="moreinfo">More</button>
           </a>
